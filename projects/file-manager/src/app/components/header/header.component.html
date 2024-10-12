@@ -1,0 +1,43 @@
+<body>
+    <!-- Top Bar -->
+    <div class="topbar d-flex justify-content-between align-items-center">
+      <!-- Breadcrumbs -->
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+  
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="d-flex p-3 justify-content-center align-items-center">
+        <h4 class="logo">iWord File Manager</h4>
+      </div>
+      <hr>
+      <div class="d-flex p-3 justify-content-between align-items-center">
+        <div class="profile-image">
+          <img class="profile-image" [src]="profilePic ? profilePic : defaultProfile" alt="Profile Picture">
+        </div>
+        <div class="profile-details">
+          <ul>
+            <li><input type="text" value="Zama Dumisa"></li>
+            <li><input type="email" name="" value="zSim@gmail.com" id=""></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="nav-options">
+        <ul>
+          <li><a class="w-100 p-2 rounded">Dashboard</a></li>
+          <li><a class="w-100 p-2 rounded" href="#services">Services</a></li>
+          <li><a class="w-100 p-2 rounded" href="#about">About</a></li>
+          <li><a class="w-100 p-2 rounded" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  
+  </body>
