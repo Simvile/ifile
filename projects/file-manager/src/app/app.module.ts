@@ -8,9 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { SharedFilesModule } from '../../../shared-files/src/lib/shared-files.module';
 import { FilesComponent } from './components/files/files.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent, HomeComponent, FilesComponent ],
+  declarations: [AppComponent,HeaderComponent, HomeComponent, FilesComponent, NotFoundComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

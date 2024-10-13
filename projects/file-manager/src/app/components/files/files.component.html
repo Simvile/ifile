@@ -1,1 +1,106 @@
-<p>files works!</p>
+<div class="container">
+    <section id="search-area" class="d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-start align-items-center">
+        <button class="p-2 rounded" type="button"><i class="bi bi-plus"></i>New File</button>
+        &nbsp;&nbsp;
+        <div class="dropdown-container">
+            <input type="text" id="dropdownInput" placeholder="Search Filters" (focus)="toggleDropdown()" (blur)="toggleDropdown()" (input)="filterOptions()">
+            <div class="dropdown-list" [ngClass]="{'show': isDropdownOpen}" id="dropdownList">
+              <div (click)="handleOptionClick('Option 1')">Option 1</div>
+              <div (click)="handleOptionClick('Option 2')">Option 2</div>
+              <div (click)="handleOptionClick('Option 3')">Option 3</div>
+              <div (click)="handleOptionClick('Option 4')">Option 4</div>
+              <div (click)="handleOptionClick('Option 5')">Option 5</div>
+            </div>
+          </div>
+          
+      </div>
+      <div class="">
+        <label for="searchBox">Search by name</label>&nbsp;
+        <input class="p-2" type="search" placeholder="Start typing..." name="searchBox" id="searchBox">
+      </div>
+    </section>
+
+    <section id="file-options">
+        <div class="file-opts d-flex justify-content-between align-items-center mt-3 p-1">
+            <div class="opts d-flex justify-content-start align-items-center">
+                <button type="button"><i class="bi bi-lock"></i></button>
+                <button type="button"><i class="bi bi-download"></i></button>
+                <button type="button"><i class="bi bi-file-earmark-text"></i></button>
+                <button type="button"><i class="bi bi-trash3"></i></button>
+            </div>
+            <div class="file-name">
+                <label for="">File name oofjsonfosnfiwinfiwnifi dkifgiehg</label>
+            </div>
+            <div class="more-opts dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrows-move"></i>&nbsp;Open file</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-pen"></i>&nbsp;Rename file</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-download"></i>&nbsp;Download</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-trash3"></i>&nbsp;Delete</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-send"></i>&nbsp;Request Access</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i>&nbsp;File information</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="files">
+        <table class="table table-sm table-hover mt-4">
+            <caption>File List</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Filename</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Last Modified</th>
+                    <th scope="col">File Size</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="" alt="file-icon">
+                        <label for="">work-file.pdf</label>
+                    </td>
+                    <td><label for="">Simvile Zimeme</label></td>
+                    <td><label for="">Oct 13, 2024 by Simvile</label></td>
+                    <td><label for="">536kb</label></td>
+                    <td>
+                        <div class="opts d-flex justify-content-end align-items-center">
+                            <button type="button"><i class="bi bi-trash3"></i></button>
+                            <button type="button"><i class="bi bi-file-earmark-text"></i></button>
+                            <button type="button"><i class="bi bi-download"></i></button>
+                            <button type="button"><i class="bi bi-lock"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="" alt="file-icon">
+                        <label for="">work-file.pdf</label>
+                    </td>
+                    <td><label for="">Simvile Zimeme</label></td>
+                    <td><label for="">Oct 13, 2024 by Simvile</label></td>
+                    <td><label for="">536kb</label></td>
+                    <td>
+                        <div class="opts d-flex justify-content-end align-items-center">
+                            <button type="button"><i class="bi bi-trash3"></i></button>
+                            <button type="button"><i class="bi bi-file-earmark-text"></i></button>
+                            <button type="button"><i class="bi bi-download"></i></button>
+                            <button type="button"><i class="bi bi-lock"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+  </div>
+  

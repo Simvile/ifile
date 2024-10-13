@@ -1,43 +1,43 @@
 <body>
     <!-- Top Bar -->
     <div class="topbar d-flex justify-content-between align-items-center">
-      <!-- Breadcrumbs -->
-      <app-breadcrumb></app-breadcrumb>
+        <!-- Breadcrumbs -->
+        <app-breadcrumb></app-breadcrumb>
+        <div class="more-opts dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="profile-image" [src]="profilePic ? profilePic : defaultProfile" alt="Profile Picture">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>&nbsp;Open Profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i>&nbsp;Settings</a></li>
+                <hr>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i>&nbsp;Sign Out</a></li>
+            </ul>
+        </div>
     </div>
-  
+
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="d-flex p-3 justify-content-center align-items-center">
-        <h4 class="logo">iWord File Manager</h4>
-      </div>
-      <hr>
-      <div class="d-flex p-3 justify-content-between align-items-center">
-        <div class="profile-image">
-          <img class="profile-image" [src]="profilePic ? profilePic : defaultProfile" alt="Profile Picture">
+        <div class="d-flex p-3 justify-content-center align-items-center">
+            <h4 class="logo">iWord File Manager</h4>
         </div>
-        <div class="profile-details">
-          <ul>
-            <li><input type="text" value="Zama Dumisa"></li>
-            <li><input type="email" name="" value="zSim@gmail.com" id=""></li>
-          </ul>
+        <hr>
+        <div class="nav-options">
+            <ul>
+                <li><a class="w-100 p-2 rounded">Dashboard</a></li>
+                <li><a class="w-100 p-2 rounded" [routerLink]="">iworld File manager</a></li>
+                <li><a class="w-100 p-2 rounded" href="#about">iworld Messenger</a></li>
+                <li><a class="w-100 p-2 rounded" href="#contact">Employee Services</a></li>
+            </ul>
         </div>
-      </div>
-      <hr>
-      <div class="nav-options">
-        <ul>
-          <li><a class="w-100 p-2 rounded">Dashboard</a></li>
-          <li><a class="w-100 p-2 rounded" href="#services">Services</a></li>
-          <li><a class="w-100 p-2 rounded" href="#about">About</a></li>
-          <li><a class="w-100 p-2 rounded" href="#contact">Contact</a></li>
-        </ul>
-      </div>
     </div>
-  
+
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
-        <router-outlet></router-outlet>
-      </div>
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
     </div>
-  
-  </body>
+
+</body>

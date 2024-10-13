@@ -1,0 +1,192 @@
+p, h1, h2, h3, h4, h5, a, label, input{
+    color: #ccc;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px black;
+}
+
+input[type="search"]{
+   outline: none;
+   background-color: #07203A;
+   border: none;
+   border-radius: 5px;
+   transition: 0.4s ease-in-out;
+}
+
+input[type="search"]:focus{
+    box-shadow: inset 0px 0px 5px 20px #03182D;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-title {
+    margin: 0;
+    padding-right: 10px; 
+    font-weight: bold; 
+  }
+  
+  hr {
+    flex-grow: 1; 
+    border: none;
+    border-top: 1px solid #ccc; 
+    margin: 0;
+  }
+  
+
+#project-section img{
+    width: 200px;
+}
+
+button[type="button"] {
+    outline: none;
+    border: none; 
+    height: 35px;
+    width: 100px;
+    font-size:small;
+    border-radius: 2px;
+    background-color: transparent; 
+    color: #ccc; 
+    transition: 0.3s ease-in-out;
+}
+
+button[type="button"]:hover {
+    background-color: #03182D;
+    border: none;
+    border-bottom:1px solid #ccc;
+    color: #ccc;
+}
+
+
+button[type="button"]:active{
+transform: scale(97%);
+}
+
+#dropdownInput{
+    outline: none;
+    background-color: #07203A;
+    border: none;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+ }
+
+ #dropdownInput:hover {
+    background-color: #03182D;
+    cursor: pointer;
+    border: none;
+    border-bottom:1px solid #ccc;
+    color: #ccc;
+}
+ 
+ #dropdownInput:focus{
+     box-shadow: inset 0px 0px 5px 20px #03182D;
+ }
+
+ .dropdown-container {
+    position: relative;       
+    width: 200px;            
+  }
+  
+  #dropdownInput {
+    width: 100%;              
+    padding: 8px;             
+  }
+  
+  .dropdown-list {
+    position: absolute;       
+    top: 100%;                
+    left: 0;                  
+    width: 100%;              
+    background-color: #03182D;
+    border: none;   
+    z-index: 1000;            
+    max-height: 0;            
+    overflow-y: auto;         
+    opacity: 0;               
+    transition: max-height 0.4s ease, opacity 0.4s ease; 
+  }
+  
+  .dropdown-list.show {
+    max-height: 200px;       
+    opacity: 1;               
+  }
+  
+  .dropdown-list div {
+    padding: 10px;            
+    cursor: pointer;          
+    color: white;
+  }
+  
+  #dropdownMenuButton:hover{
+    border-bottom: 1px solid #ccc;
+  }
+
+  .dropdown-list div:hover {
+    background: linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
+  }
+
+.dropdown-list::-webkit-scrollbar {
+    width: 7px;
+    display: none;
+}
+
+.file-opts{
+    background: linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
+    border: none;
+    border-radius: 50px;
+}
+  
+.opts button{
+    width: 35px;
+    border: none;
+    border-radius: 50%;
+    font-size:medium;
+}
+.opts button:hover{
+    border-bottom:1px solid #ccc;
+}
+
+.more-opts button{
+    width: 35px;
+    border: none;
+    border-radius: 50%;
+    font-size:small;
+}
+.file-name{
+    margin-left: -100px;
+}
+
+.table {
+    background-color: transparent;
+}
+
+.table th, .table td {
+    background-color: transparent;
+    color: #ccc;
+}
+.table tbody tr:hover{
+    background: linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
+}
+
+.table label{
+    margin-top: 5px;
+}
+
+.no-caret::after {
+    display: none; /* Hides the caret */
+}
+
+.dropdown-toggle::after {
+    display: none; /* Also hides the default Bootstrap caret */
+}
+
+.dropdown-menu{
+    background-color: #03182D;
+}
+.dropdown-item:hover{
+    background:linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
+    color: white;
+}
