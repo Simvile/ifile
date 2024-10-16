@@ -1,0 +1,61 @@
+
+  <div class="modal-content custom-modal-width">
+    <div class="modal-header">
+      <h5 class="modal-title" id="previewModalLabel">Add a new {{data}}</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <ng-container *ngIf="data == 'file'">
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-start align-items-start">
+                    <label for="filename">Filename</label>&nbsp;
+                    <input type="text" placeholder="Enter filename" name="" id="">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="mb-2">Select Visibility</label>
+                    <div class="radio-option">
+                        <input type="radio" name="visibility" id="visible-everyone" value="Visible to everyone" (change)="onVisibilityChange('everyone')">&nbsp;
+                        <label for="visible-everyone">Visible to everyone</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="visibility" id="limited-visibility" value="Limited visibility" (change)="onVisibilityChange('limited')">&nbsp;
+                        <label for="limited-visibility">Limited Visibility</label>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-2" *ngIf="selectedVisibility === 'limited'">
+                    <label for="filename">Select groups</label>
+                    <div class="dropdown-container">
+                        <input type="text" id="dropdownInput" placeholder="Search Filters" (focus)="toggleDropdown()" (blur)="toggleDropdown()" style="width: 100%;">
+                        <div class="dropdown-list" [ngClass]="{'show': isDropdownOpen}" id="dropdownList">
+                            <div>Group 1</div>
+                            <div>Group 2</div>
+                            <div>Group 3</div>
+                            <div>Group 4</div>
+                            <div>Group 5</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12">
+                    <input type="file" class="w-100" name="" id="">
+                </div>
+                
+            </div>
+        </ng-container>
+        <ng-container *ngIf="data == 'folder'">
+            <div class="row">
+                <div class="col-md-12 d-flex flex-column justify-content-start align-items-start">
+                    <label for="filename">Folder name</label>&nbsp;
+                    <input type="text" placeholder="Enter folder name" name="" id="">
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="modal-footer d-flex align-items-center justify-content-between">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="uploadItem(data)">Save {{data}}</button>
+    </div>
+  </div>
+

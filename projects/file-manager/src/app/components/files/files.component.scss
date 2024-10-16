@@ -198,3 +198,7 @@ transform: scale(97%);
     border-radius: 50%;
     margin-right: 5px;
 }
+
+.selected-row {
+    background:linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
+}

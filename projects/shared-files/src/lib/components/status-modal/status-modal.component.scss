@@ -1,0 +1,22 @@
+.mmmm{
+    background-color:#07203A ;
+    padding: 5px;
+}
+
+button[type="button"] {
+    outline: none;
+    height: 35px;
+    width:100px;
+    font-size:smaller;
+    border-radius: 2px;
+    color: #ccc; 
+    transition: 0.3s ease-in-out;
+    background-color: #03182D;
+    border: none;
+    border-bottom:1px solid #ccc;
+}
+
+.message-div{
+    color:#ccc;
+    letter-spacing: 1px;
+}
