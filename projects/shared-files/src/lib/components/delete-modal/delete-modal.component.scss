@@ -1,0 +1,54 @@
+p, h1, h2, h3, h4, h5, input, label{
+    color: #ccc;
+    letter-spacing: 1px;
+
+}
+
+.custom-modal-width{
+    background-color: #07203A;
+}
+
+button[type="button"] {
+    outline: none;
+    border: none; 
+    height: 35px;
+    font-size:smaller;
+    border-radius: 2px;
+    background-color: transparent; 
+    color: #ccc; 
+    transition: 0.3s ease-in-out;
+}
+
+button[type="button"]:hover {
+    background-color: #03182D;
+    border: none;
+    border-bottom:1px solid #ccc;
+    color: #ccc;
+}
+
+
+button[type="button"]:active{
+transform: scale(97%);
+}
+
+button[type="button"] .btn-close{
+    border: none;
+    height: 30px !important;
+}
+
+input[type="text"]{
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    background-color: #03182D;
+    border: none;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+ }
+ 
+ input[type="text"]:focus{
+     box-shadow: inset 0px 0px 5px 20px #03182D;
+     border-bottom: 1px solid #ccc;
+ }
+
+

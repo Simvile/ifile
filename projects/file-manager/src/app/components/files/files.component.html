@@ -24,11 +24,12 @@
     <section *ngIf="selectedFile" id="file-options">
         <div class="file-opts d-flex justify-content-between align-items-center mt-3 p-1">
             <div class="opts d-flex justify-content-start align-items-center">
-                <button type="button" (click)="unSelectFile()"><i class="bi bi-x-lg"></i></button>
-                <button type="button"><i class="bi bi-lock"></i></button>
-                <button type="button"><i class="bi bi-download"></i></button>
-                <button type="button"><i class="bi bi-file-earmark-text"></i></button>
-                <button type="button"><i class="bi bi-trash3"></i></button>
+                <button type="button" class="close-btn" (click)="unSelectFile()"><i class="bi bi-x-lg"></i></button>
+                <span class="vertical-divider"></span>
+                <button type="button" [disabled]="isLocked? false:true"><i class="bi bi-lock" [ngClass]="{'text-secondary': isLocked? false:true}"></i></button>
+                <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-download" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
+                <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-file-earmark-text" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
+                <button type="button" [disabled]="isLocked? true:false" (click)="deletefile('delete-file')"><i class="bi bi-trash3" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
             </div>
             <div class="file-name">
                 <label>{{ selectedFile }}</label>
@@ -42,7 +43,7 @@
                     <hr>
                     <li><a class="dropdown-item" href="#"><i class="bi bi-pen"></i>&nbsp;Rename file</a></li>
                     <li><a class="dropdown-item" href="#"><i class="bi bi-download"></i>&nbsp;Download</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-trash3"></i>&nbsp;Delete</a></li>
+                    <li><a class="dropdown-item" (click)="deletefile('delete-file')"><i class="bi bi-trash3"></i>&nbsp;Delete</a></li>
                     <hr>
                     <li><a class="dropdown-item" href="#"><i class="bi bi-send"></i>&nbsp;Request Access</a></li>
                     <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i>&nbsp;File information</a></li>
@@ -77,10 +78,10 @@
                     <td><label>{{ file.size }}</label></td>
                     <td>
                         <div class="opts d-flex justify-content-end align-items-center">
-                            <button type="button"><i class="bi bi-trash3"></i></button>
-                            <button type="button"><i class="bi bi-file-earmark-text"></i></button>
-                            <button type="button"><i class="bi bi-download"></i></button>
-                            <button type="button"><i class="bi bi-lock"></i></button>
+                            <button type="button" [disabled]="isLocked? true:false" (click)="deletefile('delete-file')"><i class="bi bi-trash3" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
+                            <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-file-earmark-text" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
+                            <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-download" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
+                            <button type="button" [disabled]="isLocked? false:true"><i class="bi bi-lock" [ngClass]="{'text-secondary': isLocked? false:true}"></i></button>
                         </div>
                     </td>
                 </tr>

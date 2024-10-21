@@ -20,7 +20,8 @@ export class AddModalComponent {
     private messageAlert: StatusModalService) {}
 
   uploadItem(itemType: string) {
-    this.messageAlert.showInfo("HOORAY;")
+    this.messageAlert.showInfo(`Successfully save ${itemType}.`);
+    this.closeModal();
     }
   
   onVisibilityChange(value: string) {

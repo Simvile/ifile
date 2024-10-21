@@ -138,9 +138,18 @@ transform: scale(97%);
     border: none;
     border-radius: 50px;
 }
+
+.vertical-divider {
+    display: inline-block;
+    width: 1px;
+    height: 25px;
+    background-color: #9f9f9f;
+    margin: 0 2px; 
+  }
   
 .opts button{
-    width: 35px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 50%;
     font-size:medium;
@@ -162,13 +171,16 @@ transform: scale(97%);
 .table {
     background-color: transparent;
 }
-
+.table td {
+    font-size: 12px;
+}
 .table th, .table td {
     background-color: transparent;
     color: #ccc;
 }
 .table tbody tr:hover{
     background: linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
+    cursor: pointer;
 }
 
 .table label{

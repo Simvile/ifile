@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddModalComponent } from '../components/add-modal/add-modal.component';
+import { DeleteModalComponent } from '../../public-api';
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +18,32 @@ export class AddModalService {
     }
   }
 
+  public openDelete(mode: 'delete-file'|'delete-folder'){
+    if (mode === 'delete-folder') {
+      this.deleteFolder();
+    } else {
+      this.deleteFile();
+    }
+  }
+
   private addFile() {
     this.previewPayload("file");
   }
   private addFolder() {
     this.previewPayload("folder");
+  }
+
+  private deleteFile(){
+    this.deleteConfirmation("file");
+  }
+
+  private deleteFolder(){
+    this.deleteConfirmation("folder");
+  }
+
+  private deleteConfirmation(data: string){
+    const modalRef = this.modalService.open(DeleteModalComponent, { size: 'lg' });
+    modalRef.componentInstance.data = data;
   }
 
   private previewPayload(payload?: any): void {

@@ -1,4 +1,4 @@
-import { Component, Renderer2, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { AddModalService } from '../../../../../shared-files/src/public-api';
 
 @Component({
@@ -8,6 +8,7 @@ import { AddModalService } from '../../../../../shared-files/src/public-api';
 })
 export class FilesComponent {
   isDropdownOpen = false;
+  isLocked: boolean = true;
 
   constructor(private addfileservice:AddModalService) {}
 
@@ -57,6 +58,10 @@ export class FilesComponent {
 
   addfile(mode: 'add-file'|'add-folder') {
     this.addfileservice.openAdd(mode);
+  }
+
+  deletefile(mode: 'delete-file'|'delete-folder') {
+    this.addfileservice.openDelete(mode);
   }
 
   handleOptionClick(option: string) {

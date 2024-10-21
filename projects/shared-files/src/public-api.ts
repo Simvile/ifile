@@ -6,6 +6,7 @@
 export * from './lib/components/breadcrumbs/breadcrumbs.component';
 export * from './lib/components/add-modal/add-modal.component';
 export * from './lib/components/status-modal/status-modal.component';
+export * from './lib/components/delete-modal/delete-modal.component';
 
 // Export Services
 export * from './lib/services/breadcrumb.service';
