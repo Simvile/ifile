@@ -1,0 +1,28 @@
+.vertical-divider {
+    display: inline-block;
+    width: 1px;
+    height: 25px;
+    background-color: #9f9f9f;
+    margin: 0 2px; 
+  }
+
+button[type="button"]{
+    outline: none;
+    color: #ccc;
+    font-size: 12px;
+    width: auto;
+    background-color: #07203A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: 0.4s ease-in-out;
+ }
+
+ button[type="button"]:hover {
+    background-color: #03182D;
+    cursor: pointer;
+    border: none;
+    border-bottom:1px solid #ccc;
+    color: #ccc;
+}

@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     RouterOutlet,
     FormsModule,
-    SharedFilesModule
+    SharedFilesModule,
 ],
   bootstrap: [AppComponent]
 })

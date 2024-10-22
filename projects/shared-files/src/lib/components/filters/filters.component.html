@@ -1,0 +1,10 @@
+<div class="list-container d-flex align-items-center justify-items-center" *ngIf="pagedData.length > 0">
+    <div class="list-pager-headers d-flex justify-content-start align-items-center">
+        <div class="list-pager-header d-flex justify-content-center align-items-center" (click)="select(p.name)" [ngClass]="selectedName== p.name ? 'btn-active' : ''"
+            *ngFor="let p of pagedData">
+            <span class="vertical-divider"></span>
+            <button class="p-2" type="button"><i class="bi bi-filter"></i>&nbsp;{{p.name}}</button>
+        </div>
+        <span class="vertical-divider"></span>
+    </div>
+  </div>
