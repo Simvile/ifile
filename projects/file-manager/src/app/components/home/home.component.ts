@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AddModalService } from '../../../../../shared-files/src/public-api';
+import { AddModalService } from '@ifile/shared-files';
 
 @Component({
   selector: 'app-home',

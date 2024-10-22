@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddModalService } from '../../../../../shared-files/src/public-api';
+import { AddModalService } from '@ifile/shared-files';
 
 @Component({
   selector: 'app-files',
@@ -11,7 +11,7 @@ export class FilesComponent implements OnInit {
   files: any[] = [];
   filteredFiles: any[] = [];
   isDropdownOpen = false;
-  isLocked: boolean = false;
+  isLocked: boolean = true;
 
   constructor(private addfileservice:AddModalService) {}
 
