@@ -5,6 +5,26 @@ body {
     margin: 0;
   }
 
+.navbar-brand{
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+}
+
+.navbar-brand h5{
+  color:#07203A;
+}
+
+h1, h2, h3, h3, h4 ,h5 ,p ,a ,span{
+  color:#ccc;
+  text-decoration: none;
+}
+
+h1:hover, h2:hover, h3:hover, h3:hover, h4:hover ,h5:hover, p:hover, a:hover, span:hover{
+  color:white;
+  text-decoration: none;
+}
+
   hr {
     flex-grow: 1; 
     border: none;
@@ -12,39 +32,7 @@ body {
     margin: 0;
   }
 
-  .sidebar {
-    width: 250px;
-    background-color: #03182D;
-    color: #ccc;
-    height: 100%;
-    position: fixed;
-    top:0;
-    left:0;
-  }
-
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .sidebar .nav-options ul li {
-    padding: 5px;
-    text-align: center;
-  }
-
-  .sidebar .nav-options ul li a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-  }
-
-  .sidebar .nav-options ul li a:hover {
-    background-color: #495057;
-  }
-
   .content {
-    margin-left: 250px;
-    padding: 20px;
     width: 100%;
     margin-top: 56px;
   }
@@ -52,11 +40,10 @@ body {
   .topbar {
     position: fixed;
     top: 0;
-    left:257px;
     background-color: #03182D;
     color: #ccc;
     height: 56px;
-    width: 82.9%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
