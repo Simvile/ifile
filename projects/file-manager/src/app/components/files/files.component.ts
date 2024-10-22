@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AddModalService } from '../../../../../shared-files/src/public-api';
 
 @Component({
@@ -6,13 +6,19 @@ import { AddModalService } from '../../../../../shared-files/src/public-api';
   templateUrl: './files.component.html',
   styleUrls: ['./files.component.scss']
 })
-export class FilesComponent {
+export class FilesComponent implements OnInit {
+  searchTerm: string = '';
+  files: any[] = [];
+  filteredFiles: any[] = [];
   isDropdownOpen = false;
-  isLocked: boolean = true;
+  isLocked: boolean = false;
 
   constructor(private addfileservice:AddModalService) {}
 
-  files = [
+
+  ngOnInit(): void {
+
+  this.files = [
     {
       name: 'work-file.pdf',
       owner: 'Simvile Zimeme',
@@ -38,6 +44,22 @@ export class FilesComponent {
       size: '536kb'
     }
   ];
+
+  this.filteredFiles = this.files;
+}
+
+filterFiles(): void {
+  if (!this.searchTerm) {
+    this.filteredFiles = this.files;
+  } else {
+    this.filteredFiles = this.files.filter(file =>
+      file.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      file.owner.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      file.lastModified.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
+}
+
 
   selectedFile: string | null = null;
 

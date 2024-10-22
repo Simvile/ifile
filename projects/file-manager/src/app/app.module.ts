@@ -9,6 +9,7 @@ import { SharedFilesModule } from '../../../shared-files/src/lib/shared-files.mo
 import { FilesComponent } from './components/files/files.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent,HeaderComponent, HomeComponent, FilesComponent, NotFoundComponent ],
@@ -16,6 +17,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
+    FormsModule,
     SharedFilesModule
 ],
   bootstrap: [AppComponent]
