@@ -22,10 +22,10 @@ export class FilesComponent implements OnInit {
 
   ngOnInit(): void {
     this.filters = [
-      { name: "Filter-by-Name", value: 1 },
-      { name: "Filter-by-Date", value: 2 },
-      { name: "Filter-by-Size", value: 3 },
-      { name: "Filter-by-Owner", value: 4 }
+      { name: "Sort-by-Name", value: 1 },
+      { name: "Sort-by-Date", value: 2 },
+      { name: "Sort-by-Size", value: 3 },
+      { name: "Sort-by-Owner", value: 4 }
     ];
 
   this.files = [
@@ -77,28 +77,28 @@ filterByStatus(statusName: string): void {
   
   if (status) {
     switch (status.name) {
-      case "Filter-by-Name":
+      case "Sort-by-Name":
         this.filteredFiles.sort((a, b) => this.isAscending 
           ? a.name.localeCompare(b.name) 
           : b.name.localeCompare(a.name)
         );
         break;
         
-      case "Filter-by-Date":
+      case "Sort-by-Date":
         this.filteredFiles.sort((a, b) => this.isAscending 
           ? new Date(a.lastModified).getDate() - new Date(b.lastModified).getDate()
           : new Date(b.lastModified).getDate() - new Date(a.lastModified).getDate()
         );
         break;
         
-      case "Filter-by-Size":
+      case "Sort-by-Size":
         this.filteredFiles.sort((a, b) => this.isAscending 
           ? parseInt(a.size) - parseInt(b.size) 
           : parseInt(b.size) - parseInt(a.size)
         );
         break;
         
-      case "Filter-by-Owner":
+      case "Sort-by-Owner":
         this.filteredFiles.sort((a, b) => this.isAscending 
           ? a.owner.localeCompare(b.owner) 
           : b.owner.localeCompare(a.owner)

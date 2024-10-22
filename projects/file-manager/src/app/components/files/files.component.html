@@ -48,7 +48,7 @@
             <lib-filters [data]="filters" (onSelect)="filterByStatus($event)"></lib-filters>
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
-            <label for="searchBox">Search Here:</label>&nbsp;
+            <label for="searchBox">Search by name:</label>&nbsp;
             <input class="p-2 border-bottom" type="search" placeholder="Start typing..." name="searchBox" id="searchBox"
             [(ngModel)]="searchTerm" (ngModelChange)="filterFiles()">
         </div>
