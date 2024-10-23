@@ -15,7 +15,15 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "paths": {
-      "@ifile/shared-files": ["./dist/shared-files"]
+      "@ifile/shared-files": [
+        "./dist/shared-files"
+      ],
+      "@imanager/Employee": [
+        "./dist/employee"
+      ],
+      "@imanager/Messenger": [
+        "./dist/messenger"
+      ]
     },
     "importHelpers": true,
     "target": "ES2022",
