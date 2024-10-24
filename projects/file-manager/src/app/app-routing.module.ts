@@ -8,31 +8,29 @@ import { RegisterComponent } from './components/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 
 export const routes: Routes = [
-  { path: 'LogIn', component: LogInComponent },
-  { path: 'Register', component: RegisterComponent },
+  { path: 'login', component: LogInComponent, data: { breadcrumb: 'Login' } },
+  { path: 'register', component: RegisterComponent, data: { breadcrumb: 'Register' } },
   {
     path: 'home',
     component: HeaderComponent,
     data: { breadcrumb: 'Home' },
     children: [
       {
-        path: '',
+        path: 'folders',
         component: HomeComponent,
         data: { breadcrumb: 'Folders' },
-      },
-      {
-        path: 'files',
-        component: FilesComponent,
-        data: { breadcrumb: 'Files' },
+        children:[
+          {
+            path: 'files',
+            component: FilesComponent,
+            data: { breadcrumb: 'Files' },
+          },
+        ]
       },
     ],
   },
-  {
-    path: '404',
-    component: NotFoundComponent,
-    data: { breadcrumb: 'Not-Found' },
-  },
-  { path: '', redirectTo: '/LogIn', pathMatch: 'full' },
+  { path: '404', component: NotFoundComponent, data: { breadcrumb: 'Not Found' } },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', redirectTo: '/404' },
 ];
 

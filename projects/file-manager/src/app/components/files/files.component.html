@@ -37,19 +37,19 @@
         </div>
     </section>
     <section *ngIf="!selectedFile" class="mt-1 p-2">
-        <p>Welcome to File-manager</p>
+        <p>WELCOME TO FILE-MANAGER</p>
     </section>
 
     <div id="search-area" class="row d-flex justify-content-between align-items-center">
         <div class="col-md-1 d-flex justify-content-start align-items-center">
-            <button class="p-2 w-100" type="button" (click)="addfile('add-file')"><i class="bi bi-plus"></i>Add File</button>
+            <button type="submit" (click)="addfile('add-file')"><i class="bi bi-plus"></i>New file</button>
         </div>
         <div class="col-md-5 p-2 filters d-flex justify-content-start align-items-center">
             <lib-filters [data]="filters" (onSelect)="filterByStatus($event)"></lib-filters>
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
             <label for="searchBox">Search by name:</label>&nbsp;
-            <input class="p-2 border-bottom" type="search" placeholder="Start typing..." name="searchBox" id="searchBox"
+            <input type="search" placeholder="Start typing..." name="searchBox" id="searchBox"
             [(ngModel)]="searchTerm" (ngModelChange)="filterFiles()">
         </div>
     </div>

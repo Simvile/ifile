@@ -10,7 +10,6 @@ export * from './lib/components/delete-modal/delete-modal.component';
 export * from './lib/components/filters/filters.component';
 
 // Export Services
-export * from './lib/services/breadcrumb.service';
 export * from './lib/services/add-modal.service';
 export * from './lib/services/status-modal.service';
 

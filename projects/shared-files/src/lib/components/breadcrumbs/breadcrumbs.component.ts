@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BreadcrumbService } from '../../services/breadcrumb.service';
-import { Breadcrumb } from '../../models/breadcrumb-model.service';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -8,15 +8,41 @@ import { Breadcrumb } from '../../models/breadcrumb-model.service';
   styleUrls: ['./breadcrumbs.component.scss']
 })
 export class BreadcrumbsComponent implements OnInit {
-  breadcrumbs: Breadcrumb[] = [];
 
-  constructor(private breadcrumbService: BreadcrumbService) {}
+  breadcrumbs: Array<{ label: string, url: string }> = [];
 
-  ngOnInit(): void {
-    this.breadcrumbService.getBreadcrumbs().subscribe(breadcrumbs => {
-      this.breadcrumbs = breadcrumbs;
-      console.log('Current Breadcrumbs:', this.breadcrumbs);
-    });
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.breadcrumbs = this.buildBreadcrumbs(this.activatedRoute.root);
+      });
   }
+
+  private buildBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: Array<{ label: string, url: string }> = []): Array<{ label: string, url: string }> {
+    const children: ActivatedRoute[] = route.children;
   
+    if (children.length === 0) {
+      return breadcrumbs;
+    }
+  
+    for (const child of children) {
+      const routeURL: string = child.snapshot.url.map(segment => segment.path).join('/');
+      if (routeURL !== '') {
+        url += `/${routeURL}`;
+      }
+  
+      const breadcrumbLabel = child.snapshot.data['breadcrumb'];
+      if (breadcrumbLabel) {
+        breadcrumbs.push({ label: breadcrumbLabel, url });
+      }
+  
+      return this.buildBreadcrumbs(child, url, breadcrumbs);
+    }
+  
+    return breadcrumbs;
+  }  
+
 }

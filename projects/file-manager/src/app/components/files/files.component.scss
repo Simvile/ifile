@@ -1,9 +1,8 @@
-p, h1, h2, h3, h4, h5, a, label, input{
+p, h1, h2, h3, h4, h5, a, label{
     color: #ccc;
     font-size: 12px;
     text-decoration: none;
     letter-spacing: 1px;
-    text-shadow: 0 0 1px black;
 }
 
 .file-content{
@@ -16,16 +15,14 @@ i{
 }
 
 input[type="search"]{
-   outline: none;
-   background-color: #07203A;
-   border: none;
-   transition: 0.4s ease-in-out;
-}
-
-input[type="search"]:focus{
-    box-shadow: inset 0px 0px 5px 20px #03182D;
-    border-bottom: 1px solid #ccc;
-}
+    border-radius: 0;
+    border: none;
+    padding:3px;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background-color: #ccc;
+  }
 
 .divider {
     display: flex;
@@ -61,6 +58,19 @@ button[type="button"] {
     font-size:small;
     border-radius: 2px;
     background-color: transparent; 
+    color: #ccc; 
+    transition: 0.3s ease-in-out;
+}
+
+button[type="submit"] {
+    outline: none;
+    border: none; 
+    height: 28px;
+    padding-right: 15px;
+    font-size:smaller;
+    border-radius: 0;
+    border-bottom:1px solid #ccc;
+    background-color: #03182D; 
     color: #ccc; 
     transition: 0.3s ease-in-out;
 }
