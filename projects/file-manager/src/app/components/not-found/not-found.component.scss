@@ -3,9 +3,13 @@ p, h1{
     letter-spacing: 1px;
 }
 
-html, body {
-    height: 100%;
-}
+body {
+    background-color: #07203A;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+  }
+
 
 .container {
     height: 80vh;
@@ -19,8 +23,8 @@ span{
 .main{
     background-color: #03182D;
     border-top: 1px solid rgb(47, 47, 47);
-    box-shadow: 5px 8px 15px 0px rgb(0, 0, 0);
-    border-radius: 30px;
+    box-shadow: 5px 8px 15px rgb(0, 0, 0);
+    border-radius: 0;
 }
 
 .main h1{

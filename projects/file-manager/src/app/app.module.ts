@@ -9,9 +9,11 @@ import { FilesComponent } from './components/files/files.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent, HomeComponent, FilesComponent, NotFoundComponent ],
+  declarations: [AppComponent,HeaderComponent, HomeComponent, FilesComponent, NotFoundComponent, LogInComponent, RegisterComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

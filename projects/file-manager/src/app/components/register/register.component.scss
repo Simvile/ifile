@@ -1,0 +1,68 @@
+body {
+    background-color: #07203A;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+.navbar-brand{
+    background-color: #ccc;
+    border: none;
+    width: 43%;
+    padding: 10px;
+  }
+
+.nav-link:hover{
+    color:white;
+}
+
+.navbar-brand h5{
+    color:#07203A;
+    font-size: large;
+    font-weight: bold;
+  }
+
+.card{
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: 0 1px 1px 1px  #03182D;
+}
+
+.card-body{
+    border-top: 1px solid #ccc;
+}
+
+h1, h2, h3, h4, h5, p, label, span, small, a{
+    color:#ccc;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+button[type="submit"]{
+    background: linear-gradient(to top, #07203A, #03182D);
+    border: none;
+    color:#ccc;
+    font-size: 12PX;
+    padding:2px;
+    box-shadow: 0 1px 1px 1px  #03182D;;
+}
+
+input[type="checkbox"]{
+    border-radius: 0;
+    outline: none;
+    border: none;
+    background-color: #ccc;
+}
+
+input.form-control{
+    border-radius: 0;
+    border: none;
+    padding: 3px;
+    outline: none;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background-color: #ccc;
+
+}
