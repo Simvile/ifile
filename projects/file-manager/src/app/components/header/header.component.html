@@ -14,17 +14,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Check-In</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Messenger</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="checkInDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Employees
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="checkInDropdown">
+                  <li><a [routerLink]="['/home/employees']" routerLinkActive="active" class="nav-link" href="#">Groups</a></li>
+                  <li><a [routerLink]="['/home/employees']" routerLinkActive="active" class="nav-link" href="#">Forms</a></li>
+                  <li><a [routerLink]="['/home/employees']" routerLinkActive="active" class="nav-link" href="#">More</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tasks</a>
+                <a [routerLink]="['/home/messenger']" routerLinkActive="active" class="nav-link" href="#">Messenger</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Groups</a>
-              </li>
-              <li class="nav-item">
-                <a [routerLink]="['/home/folders']" routerLinkActive="active" class="nav-link" href="#">Files</a>
+                <a [routerLink]="['/home/folders']" routerLinkActive="active" class="nav-link" href="#">Documents</a>
               </li>
             </ul>
           </div>

@@ -44,7 +44,7 @@
         <div class="col-md-1 d-flex justify-content-start align-items-center">
             <button type="submit" (click)="addfile('add-file')"><i class="bi bi-plus"></i>New file</button>
         </div>
-        <div class="col-md-5 p-2 filters d-flex justify-content-start align-items-center">
+        <div class="col-12 col-md-5 p-2 filters d-flex justify-content-start align-items-center mt-2 mt-md-0">
             <lib-filters [data]="filters" (onSelect)="filterByStatus($event)"></lib-filters>
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    <section id="files">
+    <section id="files" class="table-responsive mt-3">
         <table class="table table-sm table-hover mt-2">
             <caption><p>Displaying {{filterFiles.length}}/{{files.length}} files.</p></caption>
             <thead>

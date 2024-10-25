@@ -1,0 +1,120 @@
+input[type="search"]{
+    border-radius: 15px;
+    border: none;
+    padding:5px;
+    outline: none;
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 11px;
+    background-color: #ccc;
+  }
+
+  .card{
+    background-color: transparent;
+    border: none;
+    border-radius:15px;
+    height: 470px;
+    max-height: 470px;
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 6px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.chat-input {
+    margin-top: 0;
+    border-top: 1px solid #02101f;
+    background-color: transparent;
+}
+
+.chat-body {
+    height: 340px;
+    overflow-y: auto;
+    border-top: 1px solid #02101f;
+    background-color: transparent;
+}
+
+.chat-input-textSpace {
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 20px;
+    height: 35px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background-color: #ccc;
+    border: none;
+    outline: none;
+}
+
+.chat-input-textSpace::placeholder {
+    color: #777;
+}
+
+.send-button {
+    width: 35px;
+    height: 35px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #03182D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #afafaf;
+}
+
+.send-button i {
+    font-size: 1.2rem;
+}
+
+.message-sender, .message-receiver {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.message-sender {
+    align-self: flex-end;
+    background-color:#102c4a;
+    color: #ccc;
+    box-shadow: 0 1px 1px 1px black;
+    margin-left: auto;
+}
+
+.message-receiver {
+    align-self: flex-start;
+    background-color:#051f38;
+    color: #ccc;
+    box-shadow: 0 1px 1px 1px black;
+    margin-right: auto;
+}
+
+
+.message-content {
+    font-size: 0.9rem;
+}
+
+.message-timestamp {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: right;
+    margin-top: 2px;
+}

@@ -18,7 +18,7 @@ export class HomeComponent {
 
   onFolderSelection() {
     if (this.selectedFolder) {
-      this.router.navigate(['home','folders', 'files'])
+      this.router.navigate(['home', 'files'])
         .then(() => {
           console.log('Navigated to the selected folder files');
         });

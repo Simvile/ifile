@@ -6,6 +6,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
+import { EmployeesComponent } from './components/employees/employees.component';
+import { MessengerComponent } from './components/messenger/messenger.component';
 
 export const routes: Routes = [
   { path: 'login', component: LogInComponent, data: { breadcrumb: 'Login' } },
@@ -16,16 +18,28 @@ export const routes: Routes = [
     data: { breadcrumb: 'Home' },
     children: [
       {
+        path: 'employees',
+        component: EmployeesComponent,
+        data: { breadcrumb: 'Employees' },
+        children:[]
+      },
+      {
+        path: 'messenger',
+        component: MessengerComponent,
+        data: { breadcrumb: 'Messenger' },
+        children:[]
+      },
+      {
         path: 'folders',
         component: HomeComponent,
         data: { breadcrumb: 'Folders' },
-        children:[
-          {
-            path: 'files',
-            component: FilesComponent,
-            data: { breadcrumb: 'Files' },
-          },
-        ]
+        children:[]
+      },
+      {
+        path: 'files',
+        component: FilesComponent,
+        data: { breadcrumb: 'Files' },
+        children:[]
       },
     ],
   },

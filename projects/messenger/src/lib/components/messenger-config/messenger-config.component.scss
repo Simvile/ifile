@@ -1,0 +1,31 @@
+p, h5, a, label{
+    color: #ccc;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.messenger-content{
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: transparent;
+}
+
+.card{
+    background-color: #03182D;
+    border: none;
+    border-radius:15px;
+    box-shadow: 0 1px 1px 1px  black;
+    height: 520px;
+}
+
+.card.card-body{
+    background-color: #03182D;
+    height: 100%;
+    border: none;
+}
+
+.Chat-command h1{
+    color:#03182D;
+    font-weight: bolder;
+}

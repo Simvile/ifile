@@ -4,13 +4,15 @@ import { AddModalComponent, BreadcrumbsComponent, FiltersComponent } from '../pu
 import { RouterModule } from '@angular/router';
 import { StatusModalComponent } from './components/status-modal/status-modal.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [BreadcrumbsComponent, 
     AddModalComponent, 
     StatusModalComponent,
     DeleteModalComponent,
-    FiltersComponent
+    FiltersComponent,
+    ProfileComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -20,7 +22,8 @@ import { DeleteModalComponent } from './components/delete-modal/delete-modal.com
     AddModalComponent,
     StatusModalComponent,
     DeleteModalComponent,
-    FiltersComponent
+    FiltersComponent,
+    ProfileComponent
   ]
 })
 export class SharedFilesModule { }

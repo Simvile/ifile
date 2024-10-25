@@ -8,6 +8,7 @@ export * from './lib/components/add-modal/add-modal.component';
 export * from './lib/components/status-modal/status-modal.component';
 export * from './lib/components/delete-modal/delete-modal.component';
 export * from './lib/components/filters/filters.component';
+export * from './lib/components/profile/profile.component';
 
 // Export Services
 export * from './lib/services/add-modal.service';

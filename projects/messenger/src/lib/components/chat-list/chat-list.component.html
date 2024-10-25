@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-start align-items-center mb-2">
+    <input type="search" placeholder="Start typing..." name="searchBox" id="searchBox"
+        [(ngModel)]="employeeSearch" (ngModelChange)="filterEmployees()">
+</div>
+<div class="chat-list-wrapper">
+    <div *ngFor="let employee of filteredEmployees" class="chat-item" (click)="onEmployeeSelected(employee)"
+         [ngClass]="{'selected-row': employeeSelected === employee}">
+        <img [src]="employee.profileImage || defaultProfile" alt="{{ employee.name }}'s Profile" class="profile-image">
+        <div class="chat-item-content">
+            <p class="chat-item-title">{{ employee.name }}</p>
+            <p class="chat-item-preview">Last message preview or status...</p>
+        </div>
+    </div>
+</div>

@@ -11,15 +11,30 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { RegisterComponent } from './components/register/register.component';
+import { EmployeesComponent } from './components/employees/employees.component';
+import { EmployeeModule } from '@imanager/Employee';
+import { MessengerModule } from '@imanager/Messenger';
+import { MessengerComponent } from './components/messenger/messenger.component';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent, HomeComponent, FilesComponent, NotFoundComponent, LogInComponent, RegisterComponent ],
+  declarations: [AppComponent,
+    HeaderComponent, 
+    HomeComponent, 
+    FilesComponent, 
+    NotFoundComponent, 
+    LogInComponent, 
+    RegisterComponent,
+    EmployeesComponent,
+    MessengerComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
     FormsModule,
     SharedFilesModule,
+    EmployeeModule,
+    MessengerModule
 ],
   bootstrap: [AppComponent]
 })

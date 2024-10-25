@@ -11,13 +11,15 @@ p, h1, h2, h3, h4, h5, a, label{
 }
 
 
-input[type="search"]{
+
+input[type="search"].form-control{
   border-radius: 0;
   border: none;
   padding:3px;
   outline: none;
   letter-spacing: 1px;
   font-size: 12px;
+  max-width: 200px;
   background-color: #ccc;
 }
 
@@ -40,13 +42,27 @@ input[type="search"]{
   }
   
 
-#project-section img{
-    width: 200px;
+button[type="submit"]{
+  height: 150px;
+  width: 150px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
-button[type="button"] {
+button[type="submit"] img{
+  width: 100%;
+}
+
+button[type="submit"] label{
+  width: 100%;
+  margin-top: -15px;
+}
+
+button[type="button"].form-control{
     outline: none;
-    border: none; 
+    border: none;
+    min-width: 150px;
     height: 28px;
     padding-right: 15px;
     font-size:smaller;
