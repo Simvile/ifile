@@ -7,14 +7,17 @@ input[type="search"]{
     letter-spacing: 1px;
     font-size: 11px;
     background-color: #ccc;
+    margin-bottom: -10px;
   }
 
   .card{
-    background-color: transparent;
+    background-color: #03182D;
+    height: 100%;
     border: none;
     border-radius:15px;
-    height: 470px;
-    max-height: 470px;
+    height: 520px;
+    max-height: 520px;
+    box-shadow: 0 1px 1px 1px  black;
 }
 
 .chat-body::-webkit-scrollbar {
@@ -32,13 +35,14 @@ input[type="search"]{
 }
 
 .chat-input {
-    margin-top: 0;
+    margin-top: -15px;
     border-top: 1px solid #02101f;
     background-color: transparent;
 }
 
 .chat-body {
-    height: 340px;
+    height: 390px;
+    padding: 15px;
     overflow-y: auto;
     background-color: transparent;
 }
@@ -47,7 +51,7 @@ input[type="search"]{
     flex-grow: 1;
     padding: 5px;
     border-radius: 20px;
-    height: 35px;
+    height: 32px;
     font-size: 12px;
     letter-spacing: 1px;
     background-color: #ccc;
@@ -81,39 +85,50 @@ input[type="search"]{
     font-size: 1.2rem;
 }
 
-.message-sender, .message-receiver {
+
+.message-container {
     display: flex;
-    flex-direction: column;
-    max-width: 70%;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 20px;
+    margin: 10px 0;
 }
 
-.message-sender {
-    align-self: flex-end;
-    background-color:#102c4a;
+.message-sender, .message-receiver{
+    display: inline-block;
+    min-width: 15%;
+    max-width: 60%;
+    padding: 5px;
+    padding-bottom: 2px;
     color: #ccc;
     box-shadow: 0 1px 1px 1px black;
-    margin-left: auto;
+    border-radius: 10px;
+    word-wrap: break-word;
 }
 
 .message-receiver {
-    align-self: flex-start;
-    background-color:#051f38;
-    color: #ccc;
-    box-shadow: 0 1px 1px 1px black;
-    margin-right: auto;
+    background-color: #051f38;
+    border-top-left-radius: 0;
 }
 
+.message-sender {
+    background-color: #102c4a;
+    border-bottom-right-radius: 0;
+}
 
 .message-content {
-    font-size: 0.9rem;
+    font-size: 12px;
 }
 
 .message-timestamp {
-    font-size: 0.75rem;
+    font-size: 10px;
     color: #666;
     text-align: right;
-    margin-top: 2px;
+    margin-top: -2px;
 }
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+

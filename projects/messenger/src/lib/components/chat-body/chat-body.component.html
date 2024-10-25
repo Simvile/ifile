@@ -6,14 +6,17 @@
     <div class="card-body">
         <div class="chat-body d-flex flex-column">
             <div *ngIf="selectedEmployee">
-            <div *ngFor="let message of chatMessages">
-                <div [ngClass]="{'message-sender': message.sender === 'User', 'message-receiver': message.sender === 'Friend'}">
-                    <div class="message-content">
-                        {{ message.text }}
+                <div *ngFor="let message of chatMessages">
+                    <div [ngClass]="{'message-container': true, 'justify-end': message.sender === 'User', 'justify-start': message.sender === 'Friend'}">
+                        <div [ngClass]="{'message-sender': message.sender === 'User', 'message-receiver': message.sender === 'Friend'}">
+                            <div class="message-content">
+                                {{ message.text }}
+                            </div>
+                            <div class="message-timestamp">{{ message.timestamp | date:'shortTime' }}</div>
+                        </div>
                     </div>
-                    <div class="message-timestamp">{{ message.timestamp | date:'shortTime' }}</div>
                 </div>
-            </div>
+                
             </div>
             <div *ngIf="!selectedEmployee" class="d-flex flex-column justify-content-center align-items-center vh-100">
                 <h1>Welcome to iworld messenger.</h1>
