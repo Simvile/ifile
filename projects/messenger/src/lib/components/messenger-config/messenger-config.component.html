@@ -11,17 +11,13 @@
     </div>
 
     <div class="col-md-6">
-        <div *ngIf="employeeSelected" class="card">
+        <div class="card">
             <div class="card-header d-flex justify-content-center">
                 <label>CHAT</label>
             </div>
             <div class="card-body">
                 <lib-chat-body [selectedEmployee]="employeeSelected"></lib-chat-body>
             </div>
-        </div>
-        <div *ngIf="!employeeSelected" class="d-flex flex-column justify-content-center align-items-center vh-100">
-            <h1>Welcome to iworld messenger.</h1>
-            <p>Click on anyone in the chat list to start conversating.</p>
         </div>
     </div>
     <div *ngIf="employeeSelected" class="col-md-3">
