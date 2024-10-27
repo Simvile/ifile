@@ -8,6 +8,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HeaderComponent } from './components/header/header.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { MessengerComponent } from './components/messenger/messenger.component';
+import { CheckInComponent } from './components/check-in/check-in.component';
 
 export const routes: Routes = [
   { path: 'login', component: LogInComponent, data: { breadcrumb: 'Login' } },
@@ -17,6 +18,18 @@ export const routes: Routes = [
     component: HeaderComponent,
     data: { breadcrumb: 'Home' },
     children: [
+      {
+        path: '',
+        component: CheckInComponent,
+        data: { breadcrumb: '' },
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('@imanager/check-in').then(m => m.CheckInModule),
+            runGuardsAndResolvers: 'always',
+          }
+        ]
+      },
       {
         path: 'employees',
         component: EmployeesComponent,

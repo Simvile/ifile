@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { EmployeeGroupModel } from '../../models/EmployeeGroup';
+import { Filter } from '@ifile/shared-files';
 
 @Component({
   selector: 'lib-employee-groups',
@@ -8,6 +9,7 @@ import { EmployeeGroupModel } from '../../models/EmployeeGroup';
 })
 export class EmployeeGroupsComponent {
   @Output() employee = new EventEmitter();
+  filters: Filter[] = [];
   selectedemployee: any | null = null;
   employeeSearch: string = '';
   employeeGroups: EmployeeGroupModel[] = [];
@@ -194,7 +196,23 @@ export class EmployeeGroupsComponent {
         deadline: new Date('2024-11-25'),
       },
     ];
+    this.filters = [
+      {
+        name: 'Active',
+        value: 0,
+      },
+      {
+        name: 'InActive',
+        value: 1,
+      },
+    ];
     this.filteredEmployees = this.employeeGroups;
+  }
+
+  filterByStatus(statusName: string): void {
+    const status = this.filters.find(
+      (status) => status.name === statusName
+    );
   }
 
   filterEmployees(): void {

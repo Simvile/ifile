@@ -23,6 +23,9 @@
       ],
       "@imanager/Messenger": [
         "./dist/messenger"
+      ],
+      "@imanager/check-in": [
+        "./dist/check-in"
       ]
     },
     "importHelpers": true,

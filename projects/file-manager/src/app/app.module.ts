@@ -15,11 +15,13 @@ import { EmployeesComponent } from './components/employees/employees.component';
 import { EmployeeModule } from '@imanager/Employee';
 import { MessengerModule } from '@imanager/Messenger';
 import { MessengerComponent } from './components/messenger/messenger.component';
+import { CheckInComponent } from './components/check-in/check-in.component';
 
 @NgModule({
   declarations: [AppComponent,
     HeaderComponent, 
-    HomeComponent, 
+    HomeComponent,
+    CheckInComponent,
     FilesComponent, 
     NotFoundComponent, 
     LogInComponent, 

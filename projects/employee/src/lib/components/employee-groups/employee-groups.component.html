@@ -1,3 +1,11 @@
+<div class="card mb-3">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <button type="submit"><i class="bi bi-plus"></i>&nbsp;Create new Group</button>
+        <div class="filters d-flex align-items-center">
+            <lib-filters [data]="filters" (onSelect)="filterByStatus($event)" ></lib-filters>
+        </div>
+    </div>
+</div>
 <div class="card">
     <div class="card-body">
         <div class="card-content">
@@ -49,11 +57,5 @@
                 </table>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="card mt-3">
-    <div class="card-header d-flex justify-content-start">
-        <button type="submit"><i class="bi bi-plus"></i>&nbsp;Create new Group</button>
     </div>
 </div>
