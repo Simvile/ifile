@@ -15,14 +15,9 @@
                 <a class="nav-link" href="#">Check-In</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="checkInDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a [routerLink]="['/home/employees']" class="nav-link dropdown-toggle" href="#" id="checkInDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Employees
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="checkInDropdown">
-                  <li><a [routerLink]="['/home/employees']" routerLinkActive="active" class="nav-link" href="#">Groups</a></li>
-                  <li><a [routerLink]="['/home/employees']" routerLinkActive="active" class="nav-link" href="#">Forms</a></li>
-                  <li><a [routerLink]="['/home/employees']" routerLinkActive="active" class="nav-link" href="#">More</a></li>
-                </ul>
               </li>
               <li class="nav-item">
                 <a [routerLink]="['/home/messenger']" routerLinkActive="active" class="nav-link" href="#">Messenger</a>

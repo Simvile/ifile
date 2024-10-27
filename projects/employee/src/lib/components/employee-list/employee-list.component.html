@@ -1,0 +1,26 @@
+<body class="employee-content">
+    <div class="card">
+        <div class="card-header d-flex justify-content-center">
+            <label>EMPLOYEE LIST</label>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <lib-all-employees (employee)="updateEmployee($event)"></lib-all-employees>
+                </div>
+                <div class="col-md-4">
+                    <div *ngIf="selectedemployee" class="card-content">
+                        <lib-profile [employee]="selectedemployee"></lib-profile>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-3">
+        <div class="card-header d-flex justify-content-start">
+            <button type="submit"><i class="bi bi-upload"></i>&nbsp;Upload new employees</button>
+            &nbsp;&nbsp;
+            <button type="submit"><i class="bi bi-plus"></i>&nbsp;New employee</button>
+        </div>
+    </div>
+</body>

@@ -20,26 +20,28 @@ export const routes: Routes = [
       {
         path: 'employees',
         component: EmployeesComponent,
-        data: { breadcrumb: 'Employees' },
-        children:[]
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('@imanager/Employee').then(m => m.EmployeeModule),
+            runGuardsAndResolvers: 'always',
+          }
+        ]
       },
       {
         path: 'messenger',
         component: MessengerComponent,
         data: { breadcrumb: 'Messenger' },
-        children:[]
       },
       {
         path: 'folders',
         component: HomeComponent,
         data: { breadcrumb: 'Folders' },
-        children:[]
       },
       {
         path: 'files',
         component: FilesComponent,
         data: { breadcrumb: 'Files' },
-        children:[]
       },
     ],
   },

@@ -59,21 +59,16 @@ button[type="submit"] label{
   margin-top: -15px;
 }
 
-button[type="button"].form-control{
-    outline: none;
-    border: none;
+button[type="button"]{
+    background-color: #03182D;
     min-width: 150px;
+    border: none;
     height: 28px;
-    padding-right: 15px;
-    font-size:smaller;
-    border-radius: 0;
+    font-size: 10px;
     border-bottom:1px solid #ccc;
-    margin-bottom: 5px;
-    background-color: #03182D; 
-    color: #ccc; 
-    transition: 0.3s ease-in-out;
+    color: #ccc;
 }
 
-button[type="button"]:active{
-transform: scale(97%);
+button[type="button"]:Hover {
+    background: linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
 }
