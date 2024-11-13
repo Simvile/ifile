@@ -6,7 +6,23 @@
     background-color: transparent;
 }
 
+.bi-arrow-left-short{
+    font-size:20px;
+    color: #ccc;
+}
+
 .Chat-command h1{
     color:#03182D;
     font-weight: bolder;
 }
+
+@media screen and (min-width: 319px) and (max-width: 500px) {
+    .messenger-content{
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+    .chat-list{
+        height: 640px !important;
+    }
+  }  

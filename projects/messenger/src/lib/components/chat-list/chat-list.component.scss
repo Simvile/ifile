@@ -14,17 +14,17 @@ input[type="search"]{
 }
 
 .chat-list-wrapper::-webkit-scrollbar {
-    width: 7px;
+    width: 4px;
 }
 
 .chat-list-wrapper::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background-color: transparent; 
     border-radius: 6px;
 }
 
 .chat-list-wrapper::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5); 
 }
 
 .chat-list-wrapper {
@@ -34,6 +34,16 @@ input[type="search"]{
     overflow-y: auto;
     max-height: 420px;
 }
+
+@media screen and (min-width: 319px) and (max-width: 500px) {
+    .chat-list-wrapper {
+        max-width: 100%;
+        border: none;
+        border-radius: 8px;
+        overflow-y: auto;
+        max-height: 575px;
+    }
+  } 
 
 .profile-image {
     width: 40px;

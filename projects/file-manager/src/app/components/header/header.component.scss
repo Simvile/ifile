@@ -11,14 +11,57 @@ body {
     margin-top: 20px;
   }
 
+  @media screen and (min-width: 319px) and (max-width: 500px) {
+    .breadcrumbs{
+      margin-left: 5px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+  }  
+
 .navbar-brand{
   background-color: #ccc;
   border: none;
   padding: 10px;
+  margin-left: -30px;
+}
+
+.nav-item{
+  margin-bottom: -6px;
+}
+
+.nav-item a{
+  color: #ccc;
+}
+
+.active-tab {
+  background-color: #07203A; 
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  color: #ccc; 
+  height: 100%;
+  padding: 5px 10px;
+  
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-nav{
+  padding-bottom: -5px !important;
 }
 
 .navbar-brand h5{
   color:#07203A;
+}
+
+.navbar-toggler{
+  margin-right: -30px;
+}
+
+.navbar #navbarContent{
+  background-color: #03182D;
 }
 
 h1, h2, h3, h3, h4 ,h5 ,p ,a ,span{
@@ -41,6 +84,7 @@ h1:hover, h2:hover, h3:hover, h3:hover, h4:hover ,h5:hover, p:hover, a:hover, sp
   .content {
     width: 100%;
     margin-top: 56px;
+    position: fixed;
   }
 
   .topbar {

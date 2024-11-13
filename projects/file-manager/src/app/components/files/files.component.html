@@ -4,14 +4,14 @@
             <div class="opts d-flex justify-content-start align-items-center">
                 <button type="button" class="close-btn" (click)="unSelectFile()"><i class="bi bi-x-lg"></i></button>
                 <span class="vertical-divider"></span>
-                <button type="button" [disabled]="isLocked? false:true"><i class="bi bi-lock"
+                <button type="button" [disabled]="isLocked? false:true"><i class="bi bi-lock opts-opt"
                         [ngClass]="{'text-secondary': isLocked? false:true}"></i></button>
-                <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-download"
+                <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-download opts-opt"
                         [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
-                <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-file-earmark-text"
+                <button type="button" [disabled]="isLocked? true:false"><i class="bi bi-file-earmark-text opts-opt"
                         [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
                 <button type="button" [disabled]="isLocked? true:false" (click)="deletefile('delete-file')"><i
-                        class="bi bi-trash3" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
+                        class="bi bi-trash3 opts-opt" [ngClass]="{'text-secondary': isLocked? true:false}"></i></button>
             </div>
             <div class="file-name">
                 <label>{{ selectedFile }}</label>
@@ -41,10 +41,10 @@
     </section>
 
     <div id="search-area" class="row d-flex justify-content-between align-items-center">
-        <div class="col-md-1 d-flex justify-content-start align-items-center">
+        <div class="col-md-2 d-flex justify-content-center">
             <button type="submit" (click)="addfile('add-file')"><i class="bi bi-plus"></i>New file</button>
         </div>
-        <div class="col-12 col-md-5 p-2 filters d-flex justify-content-start align-items-center mt-2 mt-md-0">
+        <div class="col-12 col-md-4 p-2 filters d-flex justify-content-center align-items-center mt-2 mt-md-0">
             <lib-filters [data]="filters" (onSelect)="filterByStatus($event)"></lib-filters>
         </div>
         <div class="col-md-6 d-flex justify-content-end align-items-center">
@@ -63,7 +63,7 @@
                     <th scope="col">Owner</th>
                     <th scope="col">Last Modified</th>
                     <th scope="col">File Size</th>
-                    <th scope="col"></th>
+                    <th scope="col" class="opts-opt"></th>
                 </tr>
             </thead>
             <tbody>
@@ -77,7 +77,7 @@
                     <td><label>{{ file.owner }}</label></td>
                     <td><label>{{ file.lastModified }} by {{ file.owner }}</label></td>
                     <td><label>{{ file.size }}</label></td>
-                    <td>
+                    <td class="opts-opt">
                         <div class="opts d-flex justify-content-end align-items-center">
                             <button type="button" [disabled]="isLocked? true:false"
                                 (click)="deletefile('delete-file')"><i class="bi bi-trash3"

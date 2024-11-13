@@ -46,6 +46,11 @@ button[type="submit"]{
     font-size: 12PX;
     padding:2px;
     box-shadow: 0 1px 1px 1px  #03182D;
+    transition: 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover{
+    background:linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
 }
 
 input[type="checkbox"]{
@@ -65,4 +70,8 @@ input.form-control{
     font-size: 12px;
     background-color: #ccc;
 
+}
+
+.form-check-label{
+    margin-top: 5px;
 }

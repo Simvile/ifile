@@ -10,23 +10,41 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
-              <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/home']">Home</a>
+            <ul class="navbar-nav me-auto mb-lg-0 d-flex align-items-center">
+              <li class="nav-item" [ngClass]="{ 'active-tab': selectedPage === 'Home' }">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/home']"
+                  (click)="setPage('Home')"
+                  >Home</a
+                >
               </li>
-              <li class="nav-item dropdown">
-                <a [routerLink]="['/home/employees']" class="nav-link dropdown-toggle" id="checkInDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Employees
-                </a>
+              <li class="nav-item" [ngClass]="{ 'active-tab': selectedPage === 'Employees' }">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/home/employees']"
+                  (click)="setPage('Employees')"
+                  >Employees</a
+                >
               </li>
-              <li class="nav-item">
-                <a [routerLink]="['/home/messenger']" routerLinkActive="active" class="nav-link">Messenger</a>
+              <li class="nav-item" [ngClass]="{ 'active-tab': selectedPage === 'Messenger' }">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/home/messenger']"
+                  (click)="setPage('Messenger')"
+                  >Messenger</a
+                >
               </li>
-              <li class="nav-item">
-                <a [routerLink]="['/home/folders']" routerLinkActive="active" class="nav-link">Documents</a>
+              <li class="nav-item" [ngClass]="{ 'active-tab': selectedPage === 'Documents' }">
+                <a
+                  class="nav-link"
+                  [routerLink]="['/home/folders']"
+                  (click)="setPage('Documents')"
+                  >Documents</a
+                >
               </li>
             </ul>
-          </div>
+            
 
           <div class="dropdown more-opts">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,15 +58,14 @@
             </ul>
           </div>
         </div>
+        </div>
       </nav>
       
     <div class="content">
-        <div class="container-fluid">
             <div class="breadcrumbs">
                 <app-breadcrumb class="border-bottom"></app-breadcrumb>
             </div>
             <router-outlet></router-outlet>
-        </div>
     </div>
 
 </body>

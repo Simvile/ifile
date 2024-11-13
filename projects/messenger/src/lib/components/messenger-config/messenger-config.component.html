@@ -1,24 +1,31 @@
 <body class="messenger-content row">
-    <div class="col-md-3">
+    <div class="col-md-3" *ngIf="!isMobileView || !chatSelected">
         <div class="card">
             <div class="card-header d-flex justify-content-center">
                 <label>CHAT LIST</label>
             </div>
-            <div class="card-body">
+            <div class="card-body chat-list">
                 <lib-chat-list (selectedEmployee)="updateEmployeeSelected($event)"></lib-chat-list>
             </div>
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6" *ngIf="employeeSelected && !isDisplayUserInfo || !isMobileView">
         <div class="card-body">
-            <lib-chat-body [selectedEmployee]="employeeSelected"></lib-chat-body>
+            <lib-chat-body [selectedEmployee]="employeeSelected" 
+            [mobileView]="isMobileView" 
+            (onReturn)="updateEmployeeSelected($event)"
+            (onViewUserInfo)="updateDisplayUserInfo($event)"></lib-chat-body>
         </div>
     </div>
-    <div *ngIf="employeeSelected" class="col-md-3">
+
+    <div *ngIf="employeeSelected && isDisplayUserInfo" class="col-md-3">
         <div class="card">
-            <div class="card-header d-flex justify-content-center">
-                <label>EMPLOYEE</label>
+            <div class="card-header d-flex justify-content-between">
+                <i *ngIf="isMobileView" class="bi bi-arrow-left-short" (click)="goBack()"></i>&nbsp;&nbsp;
+                <div class="w-100 d-flex justify-content-center">
+                    <label>EMPLOYEE</label>
+                </div>
             </div>
             <div class="card-body">
                 <lib-profile [employee]="employeeSelected"></lib-profile>

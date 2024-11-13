@@ -5,10 +5,10 @@ p, h1, h2, h3, h4, h5, a, label{
     letter-spacing: 1px;
 }
 
-.file-content{
-    margin-left: 60px;
-    margin-right: 60px;
-  }
+ .file-content{
+     margin-left: 60px;
+     margin-right: 60px;
+   }
 
 i{
     font-size: 16px;
@@ -22,6 +22,7 @@ input[type="search"]{
     letter-spacing: 1px;
     font-size: 12px;
     background-color: #ccc;
+    margin-right: 10px;
   }
 
 .divider {
@@ -67,11 +68,12 @@ button[type="submit"] {
     border: none; 
     height: 28px;
     padding-right: 15px;
-    font-size:smaller;
+    font-size:12px;
     border-radius: 0;
     border-bottom:1px solid #ccc;
     background-color: #03182D; 
     color: #ccc; 
+    width:95%;
     transition: 0.3s ease-in-out;
 }
 
@@ -228,3 +230,20 @@ transform: scale(97%);
 .selected-row {
     background:linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
 }
+
+@media screen and (min-width: 319px) and (max-width: 500px) {
+    .opts-opt {
+      display: none;
+    }
+
+    .file-content{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .table-responsive{
+        overflow-y: auto;
+        max-height: 400px;
+        padding-bottom: 80px;
+    }
+  }  

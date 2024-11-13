@@ -1,14 +1,28 @@
 <div class="card">
     <div class="card-header">
         <input type="search" placeholder="Start typing..." name="searchBox" id="searchBox"
-        *ngIf="selectedEmployee" [(ngModel)]="searchTerm" (ngModelChange)="filterFiles()">
+            *ngIf="selectedEmployee && !mobileView" [(ngModel)]="searchTerm" (ngModelChange)="filterFiles()">
+
+        <div *ngIf="selectedEmployee && mobileView" class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
+                <i class="bi bi-arrow-left-short" (click)="goBack()"></i>&nbsp;&nbsp;
+                <h5 class="chat-item-title">{{ selectedEmployee.name }}</h5>
+            </div>
+            <img class="rounded-circle"
+                [src]="selectedEmployee.profilePic ? selectedEmployee.profilePic : defaultProfile" alt="Profile Picture"
+                (click)="viewUser()"
+                style="width: 30px; height: 30px;">
+        </div>
+
     </div>
     <div class="card-body">
         <div class="chat-body d-flex flex-column">
             <div *ngIf="selectedEmployee">
                 <div *ngFor="let message of chatMessages">
-                    <div [ngClass]="{'message-container': true, 'justify-end': message.sender === 'User', 'justify-start': message.sender === 'Friend'}">
-                        <div [ngClass]="{'message-sender': message.sender === 'User', 'message-receiver': message.sender === 'Friend'}">
+                    <div
+                        [ngClass]="{'message-container': true, 'justify-end': message.sender === 'User', 'justify-start': message.sender === 'Friend'}">
+                        <div
+                            [ngClass]="{'message-sender': message.sender === 'User', 'message-receiver': message.sender === 'Friend'}">
                             <div class="message-content">
                                 {{ message.text }}
                             </div>
@@ -16,17 +30,18 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            <div *ngIf="!selectedEmployee" class="d-flex flex-column justify-content-center align-items-center vh-100">
-                <h1>Welcome to iworld messenger.</h1>
-                <p>Click on anyone in the chat list to start conversating.</p>
+            <div *ngIf="mobileView === false" class="d-flex flex-column justify-content-center align-items-center">
+                <h1 *ngIf="!selectedEmployee">Welcome to iWorld Messenger.</h1>
+                <p *ngIf="!selectedEmployee">Click on anyone in the chat list to start conversing.</p>
             </div>
+
         </div>
     </div>
     <div class="card-footer">
         <div *ngIf="selectedEmployee" class="chat-input d-flex align-items-center mb-2">
-            <input type="text" class="chat-input-textSpace form-control" placeholder="Start typing..." name="messageInput" id="messageInput">
+            <textarea type="text" class="chat-input-textSpace form-control" placeholder="Start typing..."
+                name="messageInput" id="messageInput"></textarea>
             <button type="submit" class="send-button">
                 <i class="bi bi-send-fill"></i>
             </button>

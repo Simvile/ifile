@@ -1,10 +1,40 @@
 <div class="check-in-config">
-    <div class="row">
-        <div class="col-md-10 main-content">
-            <div class="card">
-                <div class="card-header">
-                    <h5>CHECK-IN</h5>
-                </div>
+    <div class="card p-2">
+        <div class="card-header">
+            <h5>CHECK-IN</h5>
+        </div>
+        <table class="table table-md mb-2">
+            <caption>Displaying Top 5 Entries</caption>
+            <thead>
+                <tr>
+                    <th scope="col">DAYS</th>
+                    <th scope="col">FULL NAME</th>
+                    <th scope="col">ADDRESS</th>
+                    <th scope="col">CHECK-IN TIME (Hrs)</th>
+                    <th scope="col">LUNCH TIME TAKEN (Hrs)</th>
+                    <th scope="col">CHECK-OUT TIME (Hrs)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let entry of checkInDetails">
+                    <td>{{ entry.date }}</td>
+                    <td>{{ entry.fullName }}</td>
+                    <td>{{ entry.address }}</td>
+                    <td>{{ entry.checkInTime }}</td>
+                    <td>{{ entry.lunchTimeTaken }}</td>
+                    <td>{{ entry.checkOutTime }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-md-4 border">
+
+            </div>
+            <div class="col-md-4 border">
+                
+            </div>
+            <div class="col-md-4 border h-50 bg-light">
+                
             </div>
         </div>
     </div>

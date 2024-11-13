@@ -5,10 +5,10 @@ p, h1, h2, h3, h4, h5, a, label{
     letter-spacing: 1px;
 }
 
-.folder-content{
-  margin-left: 60px;
-  margin-right: 60px;
-}
+ .folder-content{
+   margin-left: 60px;
+   margin-right: 60px;
+ }
 
 
 
@@ -21,6 +21,7 @@ input[type="search"].form-control{
   font-size: 12px;
   max-width: 200px;
   background-color: #ccc;
+  margin-right: 10px
 }
 
 .divider {
@@ -62,13 +63,28 @@ button[type="submit"] label{
 button[type="button"]{
     background-color: #03182D;
     min-width: 150px;
+    max-width: 95%;
     border: none;
     height: 28px;
     font-size: 10px;
     border-bottom:1px solid #ccc;
     color: #ccc;
+    border-radius: 0;
+    margin-bottom: 10px;
 }
 
 button[type="button"]:Hover {
     background: linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
 }
+
+@media screen and (min-width: 319px) and (max-width: 500px) {
+  .folder-content{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+  .main-content{
+    overflow-y: auto;
+    max-height: 550px;
+    }
+}  

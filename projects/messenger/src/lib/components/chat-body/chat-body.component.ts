@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'lib-chat-body',
@@ -6,15 +6,26 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrl: './chat-body.component.scss',
 })
 export class ChatBodyComponent implements OnInit {
-  @Input() selectedEmployee: any;
+  @Output() onReturn = new EventEmitter();
+  @Output() onViewUserInfo = new EventEmitter<boolean>();
+  @Input() selectedEmployee: any = null;
+  @Input() mobileView: boolean = false;
   searchTerm: any;
-
+  defaultProfile: string = "https://st4.depositphotos.com/4329009/19956/v/450/depositphotos_199564354-stock-illustration-creative-vector-illustration-default-avatar.jpg";
   searchChats: string = '';
   chatMessages: any[] = [];
   filteredChats: any[] = [];
 
   ngOnInit(): void {
     this.fetchEmployees();
+  }
+
+  goBack() {
+    this.onReturn.emit(null);
+  }
+
+  viewUser(){
+    this.onViewUserInfo.emit(true);
   }
 
   fetchEmployees() {

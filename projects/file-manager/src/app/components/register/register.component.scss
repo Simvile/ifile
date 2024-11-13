@@ -48,6 +48,10 @@ button[type="submit"]{
     box-shadow: 0 1px 1px 1px  #03182D;;
 }
 
+button[type="submit"]:hover{
+    background:linear-gradient(to top, rgba(105, 105, 105, 0.5)50%,rgba(105, 105, 105, 0.5)50%);
+}
+
 input[type="checkbox"]{
     border-radius: 0;
     outline: none;
