@@ -5,7 +5,7 @@
 **I-File Manager** is an evolving project initially designed as a file management tool but has since expanded into a comprehensive management system for companies and their processes. The system integrates a **Progressive Web App (PWA)**, allowing users to access it as both a mobile app and a website.
 
 ### Test the project:
-- [Click on this link to test ifile using ngrok](https://4994-41-114-104-86.ngrok-free.app/home)
+- <a href="https://4994-41-114-104-86.ngrok-free.app/home/messenger" target="_blank">Click on this link to test ifile using ngrok</a>
 
 ### Current Features
 
